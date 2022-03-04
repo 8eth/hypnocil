@@ -1,6 +1,22 @@
-import React from "react"
+import React, {useState} from "react"
 
-function NewPatientForm() {
+function NewPatientForm({addNewPatient}) {
+
+    // TO DO: update functions to add new patient
+    const [formData, setFormData] = useState({
+        name: "",
+        sideEffect: "Dizziness"
+    })
+
+    function handleChange(e) {
+        setFormData(e.target.value)
+    }
+
+    function handleSubmit(e) {
+        e.preventDefault()
+    
+    }
+    // TO DO: update functions to add new patient
     return(
         <>
             <form id="new-patient-form">
